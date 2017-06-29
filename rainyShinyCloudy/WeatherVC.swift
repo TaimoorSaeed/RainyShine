@@ -12,7 +12,6 @@ import UIKit
 class WeatherVC: UIViewController {
 
     
-    //labels
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var currentTemoLabel: UILabel!
