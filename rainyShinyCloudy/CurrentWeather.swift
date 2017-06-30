@@ -2,7 +2,7 @@
 //  CurrentWeather.swift
 //  rainyShinyCloudy
 //
-//  Created by Taimoor Saeed on 29/06/2017.
+//  Created by Taimoor Saeed on 30/06/2017.
 //  Copyright © 2017 Taimoor. All rights reserved.
 //
 
@@ -22,7 +22,7 @@ class CurrentWeather {
         return _cityName
     }
     
-    var date: String{
+    var date: String {
         if _date == nil {
             _date = ""
         }
@@ -37,7 +37,7 @@ class CurrentWeather {
     
     var weatherType : String {
         if _weatherType == nil {
-            _weatherType = ""
+            _weatherType = "no type avalible"
         }
         return _weatherType
     }
@@ -47,5 +47,43 @@ class CurrentWeather {
             _currentTemp = 0.0
         }
         return _currentTemp
+    }
+    
+    func downloadWeatherDetails(completed : @escaping DownloadComplete)
+    {
+        //Alamofire download
+        let currentWeatherURL = URL(string: CURRENT_WEATHER_URL)!
+        
+        Alamofire.request(currentWeatherURL).responseJSON { response in
+            let result = response.result
+            
+            if let dict = result.value as? Dictionary<String, AnyObject> {
+                if let name = dict["name"] as? String {
+                    self._cityName = name.capitalized
+                    print(self._cityName)
+                }
+                
+                if let weather = dict["weather"] as? [Dictionary<String,AnyObject>] {
+                    if let main = weather[0]["main"] as? String {
+                        self._weatherType = main.capitalized
+                        print(self._weatherType)
+                    }
+                }
+                
+                if let main = dict["main"] as? Dictionary<String,AnyObject> {
+                    if let currentTempreature = main["temp"] as? Double {
+                        
+                        let kelvinToFarhenheitPreDivsison = (currentTempreature * (9/5) - 459.67)
+                        
+                        let kelvinToFarheinheit = Double(round(10 * kelvinToFarhenheitPreDivsison))
+                        
+                        self._currentTemp = kelvinToFarheinheit
+                        print(self._currentTemp)
+                    }
+                }
+            }
+            
+            completed()
+        }
     }
 }
