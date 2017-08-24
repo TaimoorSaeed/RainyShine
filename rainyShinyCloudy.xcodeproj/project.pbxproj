@@ -237,6 +237,7 @@
 				TargetAttributes = {
 					84B6FB721F046A2700C390E2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = GB5JX3BE5S;
 						ProvisioningStyle = Automatic;
 					};
 					84B6FB861F046A2800C390E2 = {
@@ -514,6 +515,7 @@
 			baseConfigurationReference = C3A2729009D42041C4510ABA /* Pods-rainyShinyCloudy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GB5JX3BE5S;
 				INFOPLIST_FILE = rainyShinyCloudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taimoor.rainyShinyCloudy;
@@ -527,6 +529,7 @@
 			baseConfigurationReference = 53CE11F26DEEB17862F6FDB4 /* Pods-rainyShinyCloudy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GB5JX3BE5S;
 				INFOPLIST_FILE = rainyShinyCloudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.taimoor.rainyShinyCloudy;
