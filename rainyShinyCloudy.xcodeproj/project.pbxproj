@@ -23,6 +23,7 @@
 		84B6FB811F046A2800C390E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B6FB7F1F046A2800C390E2 /* LaunchScreen.storyboard */; };
 		84B6FB8C1F046A2800C390E2 /* rainyShinyCloudyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6FB8B1F046A2800C390E2 /* rainyShinyCloudyTests.swift */; };
 		84B6FB971F046A2800C390E2 /* rainyShinyCloudyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B6FB961F046A2800C390E2 /* rainyShinyCloudyUITests.swift */; };
+		84CC7B6C1F504DEE00632863 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CC7B6B1F504DEE00632863 /* Location.swift */; };
 		B7274C837A7A399BA3858040 /* Pods_rainyShinyCloudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD744A068307B2C9ECFC90A7 /* Pods_rainyShinyCloudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +63,7 @@
 		84B6FB921F046A2800C390E2 /* rainyShinyCloudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rainyShinyCloudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B6FB961F046A2800C390E2 /* rainyShinyCloudyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rainyShinyCloudyUITests.swift; sourceTree = "<group>"; };
 		84B6FB981F046A2800C390E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CC7B6B1F504DEE00632863 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C3A2729009D42041C4510ABA /* Pods-rainyShinyCloudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rainyShinyCloudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rainyShinyCloudy/Pods-rainyShinyCloudy.debug.xcconfig"; sourceTree = "<group>"; };
 		CD744A068307B2C9ECFC90A7 /* Pods_rainyShinyCloudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rainyShinyCloudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,13 +131,14 @@
 				84B6FB761F046A2800C390E2 /* AppDelegate.swift */,
 				84B6FB781F046A2800C390E2 /* WeatherVC.swift */,
 				84B6FB7A1F046A2800C390E2 /* Main.storyboard */,
-				84B6FB7D1F046A2800C390E2 /* Assets.xcassets */,
 				84B6FB7F1F046A2800C390E2 /* LaunchScreen.storyboard */,
 				84B6FB821F046A2800C390E2 /* Info.plist */,
+				84B6FB7D1F046A2800C390E2 /* Assets.xcassets */,
 				84101C381F05AD63007F2F87 /* CurrentWeather.swift */,
 				84101C3A1F05B0F4007F2F87 /* Constants.swift */,
 				8467F3EA1F05E24A00A73E6C /* Forecast.swift */,
 				8467F3EF1F080C5E00A73E6C /* WeatherCell.swift */,
+				84CC7B6B1F504DEE00632863 /* Location.swift */,
 			);
 			path = rainyShinyCloudy;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				84101C391F05AD63007F2F87 /* CurrentWeather.swift in Sources */,
 				84101C3B1F05B0F4007F2F87 /* Constants.swift in Sources */,
 				8467F3EB1F05E24A00A73E6C /* Forecast.swift in Sources */,
+				84CC7B6C1F504DEE00632863 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
