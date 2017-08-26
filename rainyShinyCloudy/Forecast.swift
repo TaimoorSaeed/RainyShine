@@ -48,20 +48,21 @@ class Forecast {
             
             if let min = temp["min"] as? Double {
                 
-                let kelvinToFarhenheitPreDivsison = (min * (9/5) - 459.67)
+                let kelvinToCelsius = (min - 273.15)
                 
-                let kelvinToFarheinheit = Double(round(10 * kelvinToFarhenheitPreDivsison/10))
+                let roundCelsiusTemp = Double(round(10 * kelvinToCelsius/10))
                 
-                self._lowTemp = "\(kelvinToFarheinheit)"
+                
+                self._lowTemp = "\(roundCelsiusTemp)"
                 
             }
             if let max = temp["max"] as? Double {
                 
-                let kelvinToFarhenheitPreDivsison = (max * (9/5) - 459.67)
+                let kelvinToCelsius = (max - 273.15)
                 
-                let kelvinToFarheinheit = Double(round(10 * kelvinToFarhenheitPreDivsison/10))
+                let roundCelsiusTemp = Double(round(10 * kelvinToCelsius/10))
                 
-                self._highTemp = "\(kelvinToFarheinheit)"
+                self._highTemp = "\(roundCelsiusTemp)"
                 
                 
             }
